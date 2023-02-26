@@ -3,7 +3,14 @@ const apKuncie = httpLib('https://api.kunciebootcampqa.com/api/bootcamp');
 
 function getUserList() {
     return apKuncie
-        .get('/users');
+        .get('/users')
+        .set('Authorization', 'Bearer 123456')
+        .set('Content-Type', 'application/json);
+};
+
+function deleteUser(userId) {
+    return apKuncie
+        .delete('/users/' + userId);
 };
 
 function createUser(namaUser) {
@@ -37,5 +44,6 @@ function createUserModel2(bodyData) {
 module.exports = {
     getUserList,
     createUser,
-    createUserModel2
+    createUserModel2,
+    deleteUser
 }
