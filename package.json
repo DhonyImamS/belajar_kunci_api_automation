@@ -1,0 +1,19 @@
+{
+  "name": "belajarapikuncie",
+  "version": "1.0.0",
+  "description": "Belajar API Automasi Kuncie Part 1",
+  "main": "index.js",
+  "scripts": {
+    "check_version_mocha": "npx mocha --version",
+    "test-api": "npx mocha tests/**/*.js --timeout 10000 --reporter mochawesome --require hooks/hooks.js --require mochawesome/register"
+  },
+  "author": "DhonyImamS",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-json-schema": "^1.5.1",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "supertest": "^6.3.3"
+  }
+}
